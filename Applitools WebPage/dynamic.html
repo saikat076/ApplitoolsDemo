@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic page</title>
+        <center><h2>Dynamic page</h2></center>
+    </head>
+    
+    <body bgcolor="#00FFFF">
+        <b>Name: </b><input type="text" id="textInput" name="textInput" placeholder="enter your name">
+        <input type="button" id="answer" name="answer" value="Show text field" onclick="onButtonClick();">
+        </br></br>
+        <center><label id="demo" style="color:red; font-size:30px">Welcome</label></center>
+        
+        <script>
+            function onButtonClick(){
+                var word = document.getElementById('textInput').value;
+                var str;
+                str = 'Welcome' + ' ' + word;
+                document.getElementById('demo').innerHTML =str;
+            }
+        </script>
+    </body>
+</html>

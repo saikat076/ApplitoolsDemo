@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        </script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.alert {
+  padding: 20px;
+  background-color: green;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+</style>
+
+</head>
+    
+    <body bgcolor='#CAF4F4'>
+        <center><h1><b><u>Submit Records</u></b></h1></br></br>
+        <form method="GET" name="attendanceform" id="attendanceform" action="senddata.php">
+            <b>Name:</b><select id="name" name="name" required>
+                <option>Select option</option>
+                <option value="Faizan">Faizan Ahmed</option>
+                <option value="Kunal">Kunal Srivastava</option>
+                <option value="Manisha">Manisha Verma</option>
+                <option value="Saikat">Saikat Bhattacharyya</option>
+                <option value="Subham">Subham Shaw</option>
+                <option value="Suvam">Suvam Dhar</option>
+            </select>
+        
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        
+            <b>Date:</b><input type="date" name="date" id="date" required></input>
+            
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <b>In Time:</b><input type="time" name="intime" id="intime" required></input>
+			
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <b>Out Time:</b><input type="time" name="outtime" id="outtime" required></input>
+            </br></br>
+            <input style="color:black" type="submit" value="Submit">
+            
+            </br></br></br>
+            
+            <a href="viewRecords.php">View Records</a>
+            
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                   
+			<a href="downloadData.php">Download Data</a>
+            
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			
+			<a href="DeleteDate.html">Delete Data</a>
+            
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+			
+            <a href="logout.php">Log out</a></center>
+        </form>        
+    </body>
+</html>
