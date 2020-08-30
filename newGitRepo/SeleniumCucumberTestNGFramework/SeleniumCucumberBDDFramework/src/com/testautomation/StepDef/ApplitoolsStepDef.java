@@ -17,15 +17,10 @@ public class ApplitoolsStepDef {
 		appAction.openUrl(url);
 	}
 	
-	@When("^Validate all components of webpage$")
+	@When("^Validate components of webpage$")
 	public void Validate_all_components_of_webpage() {
 		
 		appAction.validateComponent();
-	}
-	
-	@And("^Validate the window with Applitools$")
-	public void Validate_the_window_with_Applitools() {
-		
 		appAction.ApplitoolsWindowValidation();
 	}
 	
@@ -41,15 +36,16 @@ public class ApplitoolsStepDef {
 		appAction.enterNameAndSubmit(name);
 	}
 	
-	@When("^Validate the window using Selenium$")
+	@When("^validate the layout of the dynamic webpage$")
 	public void Validate_the_window_using_Selenium() {
 		
 		appAction.validate();
+		appAction.validateUsingMatchLevel();
 	}
 	
-	@And("^validate the window using Applitools layout matchlevel$")
-	public void validate_the_window_using_Applitools_dynamic_matchlevel() {
+	@When("^Validate show ticket and cancel page and reschedule page$")
+	public void Validate_show_ticket_and_cancel_page_and_reschedule_page() {
 		
-		appAction.validateUsingMatchLevel();
+		appAction.validateRedBus();
 	}
 }
