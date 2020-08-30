@@ -29,6 +29,27 @@ public class ApplitoolsPagelocators {
 	@FindBy(xpath="//*[@id='demo']")
 	public WebElement demo;
 	
+	@FindBy(xpath="//div[contains(text(), 'Manage Booking')]")
+	public WebElement manageBooking;
+	
+	@FindBy(xpath="//*[contains(text(), 'Cancel')]")
+	public WebElement cancelBooking;
+	
+	@FindBy(xpath="//*[contains(text(), 'Reschedule')]")
+	public WebElement rescheduleBooking;
+	
+	@FindBy(xpath="//*[text()='Cancel your Ticket']")
+	public WebElement cancelheading;
+	
+	@FindBy(xpath="//*[text()='RESCHEDULE TICKETS']")
+	public WebElement rescheduleheading;
+	
+	@FindBy(xpath="//*[contains(text(), 'Show My Ticket')]")
+	public WebElement showTicket;
+	
+	@FindBy(xpath="(//*[contains(text(), 'PRINT TICKET')])[1]")
+	public WebElement printTicket;
+	
 	public ApplitoolsPagelocators(WebDriver driver) { 
 		
         this.driver = driver; 
