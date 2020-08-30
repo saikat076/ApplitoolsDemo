@@ -1,23 +1,30 @@
+@Test
+Feature: Visual validation of online attendance tracker
 @ApplitoolsTesting
-Feature: Applitools visual validation
-Scenario Outline: Applitools visual Data Validations
-	Given Open Chrome browser with "<URL>"
-	When Validate all components of webpage
-	And Validate the window with Applitools 
-	Then Close the browser
+Scenario Outline: Visual Data Validations
+Given Open Chrome browser with "<URL>"
+When Validate components of webpage
+Then Close the browser
 Examples:
   |URL|
 	|http://localhost/Applitools/Entry%20Page.html|
 
-Scenario Outline: Applitools visual Data Validations for dynamic webpage
-	Given Open Chrome browser with "<URL>"
-	And Enter "<name>" in the page and submit
-	When Validate the window using Selenium
-	And validate the window using Applitools layout matchlevel
-	Then Close the browser
+@ApplitoolsLayouts
+Scenario Outline: Visual Validations for dynamic webpage
+Given Open Chrome browser with "<URL>"
+And Enter "<name>" in the page and submit
+When validate the layout of the dynamic webpage
+Then Close the browser
 Examples:
   |URL|name|
-	|http://localhost/Applitools/dynamic.html|Saikat|
+  |http://localhost/Applitools/dynamic.html|Saikat|
 	
-	
-	
+@MultipleWindow
+Scenario Outline: Visual validation foe multiple window
+Given Open Chrome browser with "<URL>"
+When Validate show ticket and cancel page and reschedule page
+Then Close the browser
+
+Examples:
+  |URL|
+  |https://www.redbus.in/|
