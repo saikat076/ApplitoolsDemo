@@ -123,6 +123,56 @@ public class ApplitoolsPageAction {
 		appliObj.validateWindow();
 		appliObj.closeEyes();
 	}
+
+	public void validateRedBus() {
+		// TODO Auto-generated method stub
+		ApplitoolsPagelocators locators = PageFactory.initElements(driver, ApplitoolsPagelocators.class);
+		
+		appliObj.initiateEyes(driver, "Applitools", Thread.currentThread().getStackTrace()[2].getMethodName());
+		
+		driver.manage().window().maximize();
+		
+		locators.manageBooking.click();
+		locators.cancelBooking.click();
+		System.out.println(">>Validating Cancel Page");
+		appliObj.validateWindow();
+		if(locators.cancelheading.isDisplayed()) {
+			
+			System.out.println("Cancel Page validated");
+		}else {
+			
+			System.out.println("Validation failed");
+			Assert.fail();
+		}
+		
+		locators.manageBooking.click();
+		locators.rescheduleBooking.click();
+		System.out.println(">>Validating Reschedule Page");
+		appliObj.validateWindow();
+		if(locators.rescheduleheading.isDisplayed()) {
+			
+			System.out.println("Reschedule Page validated");
+		}else {
+			
+			System.out.println("Validation failed");
+			Assert.fail();
+		}
+		
+		locators.manageBooking.click();
+		locators.showTicket.click();
+		System.out.println(">>Validating Show Ticket Page");
+		appliObj.validateWindow();
+		if(locators.printTicket.isDisplayed()) {
+			
+			System.out.println("Show Ticket Page validated");
+		}else {
+			
+			System.out.println("Validation failed");
+			Assert.fail();
+		}
+		
+		appliObj.closeEyes();
+	}
 	
 	
 
